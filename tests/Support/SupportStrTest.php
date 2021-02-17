@@ -520,7 +520,8 @@ class SupportStrTest extends TestCase
 
     public function testSanitize()
     {
-        $this->assertEquals("Foo Bar", Str::sanitize('Foo 1 Bar 1'));
+
+        $this->assertEquals("Foo Bar", Str::sanitize('Foo 1 Bar 2'));
         $this->assertEquals("Foo Bar", Str::sanitize('Foo (Bar)'));
         $this->assertEquals("Foo Bar Buz", Str::sanitize('Foo (Bar) /Buz'));
         $this->assertEquals("Foo Bar Buz", Str::sanitize('Foo (Bar) __Buz__'));

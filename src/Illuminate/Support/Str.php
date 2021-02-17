@@ -807,7 +807,8 @@ class Str
             return $word;
         }
 
-        $only_letter = preg_replace("/[^A-Za-z ]/", '', $word);
-        return preg_replace('/\s+/', ' ',$only_letter);
+        $value = preg_replace('/\s+/', ' ',preg_replace("/[^A-Za-z ]/", '', $word));
+
+        return trim($value);
     }
 }
